@@ -574,7 +574,7 @@ function update(){
 }
 
 async function connectToServer() {
-    const ws = new WebSocket('ws://tic-attack-toe.onrender.com/');
+    const ws = new WebSocket('wss://tic-attack-toe.onrender.com/');
     return new Promise((resolve, reject) => {
         const timer = setInterval(() => {
             if(ws.readyState === 1) {
