@@ -341,7 +341,6 @@ class Zone extends entity{
     draw(ctx){
         const scale = this.scale * 0.5; // half of the box is used
         ctx.save();
-        ctx.font = "48px serif";
         if(this.capped["O"] != this.maxHealth){
             this.health = this.capped["O"];
             ctx.strokeStyle = "blue";
@@ -567,6 +566,7 @@ function update(){
                 world.objects["zones"][zone].capped["X"] = world.objects["zones"][zone].maxHealth;
                 world.objects["zones"][zone].capped["O"] = world.objects["zones"][zone].maxHealth;
             })
+            board = ["", "", "","", "", "","", "", ""]
         }
     }
     window.requestAnimationFrame(update);
